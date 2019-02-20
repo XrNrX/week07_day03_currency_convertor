@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>FOREXY STUFF!!</title>
+  <script src="./js/bundle.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
+</head>
+<body>
+  <div id="container">
+    <h1>CALCULATE GODDAMMIT!!!!!</h1>
+
+    <div id="app">
+      <label for="forex_selection">Original Currency</label>
+      <select id="currency_selector" v-model="convertingFrom">
+        <option selected disabled=''>Please Select a Currency</option>
+        <option v-for="(value, key) in rates" :value="value"> {{ key }}: {{ value }}</option>
+      </select>
+
+
+      <label for="currency_to_convert">Convert To</label>
+      <select id="currency_to_convert" v-model="convertingTo">
+        <option selection disabled=''>Currency to Convert To</option>
+        <option value="EUR" :value="1">EUR</option>
+        <option v-for="(value, key) in rates" :value="value"> {{ key }}: {{ value }}</option>
+      </select>
+
+      Amount to Convert<input type="number" min="0" v-model="amountToConvert">
+      <button v-on:click="currencyExchange">CONVERT!!!</button>
+      <!-- <input type="number" min="0" v-model="exchangedCurrency">
+      <input type="submit" value="Calculate"> -->
+      <h1 id="exchange-display"v-if="exchangedCurrency">You Now Have: {{ exchangedCurrency }} </h1>
+
+
+    </div>
+  </div>
+</body>
+</html>

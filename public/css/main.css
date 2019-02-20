@@ -1,0 +1,43 @@
+* {
+  font-family: 'Acme', sans-serif;
+}
+
+body {
+  background-color: #bdcaca;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: solid 2px;
+  border-radius: 25px;
+  background-color: beige;
+  width: 90%;
+  margin: auto;
+  height: 200px;
+}
+
+h1 {
+  color: cadetblue;
+}
+
+#exchange-display {
+  text-align: center;
+  font-size: 20px;
+}
+
+button {
+  background-color: antiquewhite;
+  border-radius: 4px;
+  color: seagreen;
+  border-color: darkslategrey;
+}
+
+select {
+  background-color: khaki;
+}
+
+input {
+  background-color: antiquewhite;
+}
